@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0044C9;
+    text-align: center;
+    /**** SANDBOX ***
+    background-image: url('files/bg.jpg');
+    background-size: cover;
+    background-position: top;
+    background-attachment: local;
+    background-size: 215%;
+    background-color: rgba(255, 255, 255, 0.5);
+    */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.main {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+h1 {
+    color: #FFF;;
+}
+.backgroundDiv {
+    background: #FFF;
+    padding: 4em;
+}
+  
+.test {
+    mix-blend-mode: difference;
+}
+  
+p {
+    color: #FFF;
+}
+  
+footer {
+    background-color: #FFF9EA;
+    color: #fff;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
