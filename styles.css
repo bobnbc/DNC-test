@@ -32,7 +32,10 @@ header {
     border-radius: 10px;
 }
 
-
+.dark {
+    background-color:  black;
+    color = white;
+}
 
 h1 {
     color: #FFF;;
