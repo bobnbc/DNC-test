@@ -22,45 +22,31 @@ let urls = [
 
 let index = 0;
 let menuElement = document.getElementById('menu');
-let ulElement = document.createElement('ul');
-/*
-let listMenuElement = ulElement.getAttribute('data-menuItem') || '';
-/*
-let classNamer = document.body.className;
-document.body.className = classNamer + 'menustyle';
-*/
+let ulElement = document.querySelector('ul');
 ulElement.classList.add('horizontal-menu');
+
+let linkElement = document.createAttribute('a');
 
 /*loop thru menu items*/
 menuItems.forEach(function(text, index) {
     let li = document.createElement('li');
     li.innerHTML = text;
 
-//            li.setAttribute('listMenu', index);
+    let linkElement = document.createElement('a');
+
+    linkElement.href = urls[index];
+    linkElement.textContent = menuItems[index];
+    
+//    li.setAttribute('listMenu', index);
+
+    li.setAttribute('a', urls[index]);
 
     li.classList.add('link', index);
 
-    ulElement.appendChild(li);
-});
-/*
-let myList = document.getElementById("link"+index);
+//    ulElement.appendChild(li);
+    ulElement.appendChild(linkElement);
 
-// Loop through the list items and add hyperlinks
-for (var i = 0; i < myList.children.length; i++) {
-    var listItem = myList.children[i];
-    var link = document.createElement("a");
-    link.href = urls[i]; // Assign URL to the hyperlink
-    link.textContent = listItem.textContent; // Use list item text as hyperlink text
-    listItem.textContent = ""; // Clear the text content of the list item
-    listItem.appendChild(link); // Append the hyperlink to the list item
-}
-*/
+/**/
 //let lastLi = ulElement.removeChild(ulElement.lastChild);
+});
 
-menuElement.insertAdjacentElement('afterbegin', ulElement);
-
-let menuSampleURL = 2;
-
-let menuSampleElement = document.querySelector(`li[listMenu="${menuSampleURL}"]`);
-
-//        menuSampleElement.classList.add(`link` + index);

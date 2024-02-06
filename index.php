@@ -15,7 +15,7 @@
         <div id="menu">
             <ul data-menuItem="menuItem"></ul>
         </div>
-        </div>
+    </div>
     <div>
         <img src="files/bg.jpg" width="85%">
 
