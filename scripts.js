@@ -16,8 +16,8 @@ let urls = [
     "/",
     "https://democrats.org",
     "https://iwillvote.com",
-    "/",
-    "/"
+    "about.php",
+    "contact.php"
 ];
 
 let index = 0;
