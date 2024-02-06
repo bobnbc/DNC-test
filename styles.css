@@ -40,19 +40,53 @@ header {
 h1 {
     color: #FFF;;
 }
-.backgroundDiv {
-    background: #FFF;
-    padding: 4em;
-}
-  
-.test {
-    mix-blend-mode: difference;
-}
-  
+
 p {
     color: #FFF;
 }
+
+ul {
+    list-style: none;
+}
+
+/* Style for the horizontal menu */
+ul.horizontal-menu {
+    display: flex;
+}
+
+/* Style for each menu item */
+ul.horizontal-menu li {
+    cursor: pointer;
+    margin: 0;
+    padding: 5px;
+    text-align: left;
+}
+
+/* Style for links within the menu */
+ul.horizontal-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style for hover effect on links */
+ul.horizontal-menu li a:hover {
+    background-color: #555;
+}
+
+#menu {
+    text-align: left;
+    color: #FFB934;
+}
   
+#donate {
+    cursor: pointer;
+}
+
+#volunteer {
+    cursor: pointer;
+}
+
 footer {
     background-color: #FFF9EA;
     color: #fff;

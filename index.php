@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    echo '<pre>';
+    var_dump($_SERVER);
+    echo '</pre>';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,3 +83,4 @@
     </script>
 </body>
 </html>
+</php>
