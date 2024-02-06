@@ -1,8 +1,5 @@
 <?php
     session_start();
-    echo '<pre>';
-    var_dump($_SERVER);
-    echo '</pre>';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,6 +42,7 @@
 
                 <button id="donate">Donate Now</button>
                 <button id="volunteer">Get Involved</button>
+                <p></p>
         </div>
     </div>
     <script>
@@ -82,5 +80,27 @@
 
     </script>
 </body>
+<footer>
+    <ul class="social-media-links">
+        Follow us</br>
+      <?php
+        $socialMediaLinks = array(
+          'Facebook' => 'https://www.facebook.com/democrats/',
+          'X (formerly Twitter)' => 'https://twitter.com/TheDemocrats ',
+          'Instagram' => 'https://www.instagram.com/thedemocrats/ ',
+        );
+
+        foreach ($socialMediaLinks as $platform => $url) {
+          echo '<li><a href="' . $url . '" target="_blank" rel="noopener noreferrer">' . $platform . '</a></li>';
+        }
+      ?>
+    </ul>
+    <p style="text-align: left">Copyright: <?php echo date("Y"); ?>
+</footer>
 </html>
-</php>
+<?php
+//    echo '<pre>' . print_r(get_defined_vars(), true) . '</pre>';
+    echo '<pre>';
+ //   var_dump($_SERVER);
+    echo '</pre>';
+?>

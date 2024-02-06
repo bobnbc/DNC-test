@@ -81,6 +81,7 @@ ul.horizontal-menu li a:hover {
       flex-direction: column;
       align-items: stretch;
     }
+}
     
 #menu {
     text-align: left;
@@ -96,10 +97,29 @@ ul.horizontal-menu li a:hover {
 }
 
 footer {
-    background-color: #FFF9EA;
     color: #fff;
     padding: 1em;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+
+  .social-media-links {
+    list-style: none;
+    padding: 0;
+  }
+
+  .social-media-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .social-media-links a {
+    text-decoration: none;
+    color: #fff;
+  }
