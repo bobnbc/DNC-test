@@ -32,9 +32,9 @@ header {
     border-radius: 10px;
 }
 
-.dark {
-    background-color:  black;
+.clicked {
     color = white;
+    text-decoration: underline;
 }
 
 h1 {
@@ -75,7 +75,13 @@ ul.horizontal-menu li a:hover {
     background-color: #555;
 }
 
-/* Media query for responsive layout */
+/* Style for hover effect on links */
+ul.horizontal-menu li a[href^="http://"],a[href^="https://"] {
+    color: #28a745; /* Set color for URLs */
+    font-style: italic; /* Make URLs italic */
+}
+  
+  /* Media query for responsive layout */
 @media only screen and (max-width: 600px) {
     ul.horizontal-menu {
       flex-direction: column;
@@ -87,7 +93,7 @@ ul.horizontal-menu li a:hover {
     text-align: left;
     color: #FFB934;
 }
-  
+
 #donate {
     cursor: pointer;
 }

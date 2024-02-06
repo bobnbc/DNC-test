@@ -29,6 +29,7 @@
     <div class="main">
         <h1>Welcome to the Democratic National Committee</h1>
         <div id="menu">
+            <ul data-menuItem="menuItem"></ul>
         </div>
         </div class="blah">
                 <img src="files/bg.jpg" width="85%">
@@ -56,6 +57,7 @@
         //let parentDiv = document.getElementsByClassName('main');
         let menuElement = document.getElementById('menu');
         let ulElement = document.createElement('ul');
+        let listMenuElement = ulElement.getAttribute('data-menuItem') || '';
 /*
         let classNamer = document.body.className;
         document.body.className = classNamer + 'menustyle';
@@ -67,6 +69,8 @@
             let li = document.createElement('li');
             li.innerHTML = text;
 
+            li.setAttribute('listMenu', index);
+
             ulElement.appendChild(li);
         });
 
@@ -74,6 +78,20 @@
 
         menuElement.insertAdjacentElement('afterbegin', ulElement);
 
+        let menuSampleURL = 2;
+
+        let menuSampleElement = document.querySelector(`li[listMenu="${menuSampleURL}"]`);
+
+        menuSampleElement.classList.toggle('clicked');
+
     </script>
 </body>
+<footer>
+    <ul class="social-media-links">
+        Follow us</br>
+        <a href="https://www.facebook.com/democrats/">Facebook</a> || <a href="https://twitter.com/TheDemocrats">X (formerly Twitter)</a> || <a href="https://www.instagram.com/thedemocrats/">Instagram</a>
+    </ul>
+    <p style="text-align: left">Copyright: 2024
+</footer>
+
 </html>

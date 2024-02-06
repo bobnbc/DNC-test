@@ -32,6 +32,7 @@
     <div class="main">
         <h1>Welcome to the Democratic National Committee</h1>
         <div id="menu">
+            <ul data-menuItem="menuItem"></ul>
         </div>
         </div class="blah">
                 <img src="files/bg.jpg" width="85%">
@@ -59,7 +60,8 @@
         let index = 0;
         //let parentDiv = document.getElementsByClassName('main');
         let menuElement = document.getElementById('menu');
-        let ulElement = document.createElement('ul');
+        let ulElement = document.querySelector('ul');
+        let listMenuElement = ulElement.getAttribute('data-menuItem') || '';
 /*
         let classNamer = document.body.className;
         document.body.className = classNamer + 'menustyle';
@@ -71,12 +73,20 @@
             let li = document.createElement('li');
             li.innerHTML = text;
 
+            li.setAttribute('listMenu', index);
+
             ulElement.appendChild(li);
         });
 
         //let lastLi = ulElement.removeChild(ulElement.lastChild);
 
         menuElement.insertAdjacentElement('afterbegin', ulElement);
+
+        let menuSampleURL = 2;
+
+        let menuSampleElement = document.querySelector(`li[listMenu="${menuSampleURL}"]`);
+
+        menuSampleElement.classList.toggle('clicked');
 
     </script>
 </body>
@@ -91,7 +101,7 @@
         );
 
         foreach ($socialMediaLinks as $platform => $url) {
-          echo '<li><a href="' . $url . '" target="_blank" rel="noopener noreferrer">' . $platform . '</a></li>';
+          echo '<li>|| <a href="' . $url . '" target="_blank" rel="noopener noreferrer">' . $platform . '</a> ||</li>';
         }
       ?>
     </ul>
